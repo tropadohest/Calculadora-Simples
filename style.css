@@ -1,0 +1,185 @@
+body{
+  display: flex;
+  font-family: 'Arial', Serif;
+}
+*{
+  font-size: 45px;
+  text-align: center;
+  justify-content: center;
+  color: white;
+  border-radius: 5px;
+}
+#Alert{
+ transition-property: opacity;
+ transition-duration: 0.9s;
+ opacity: 0;
+ position: absolute;
+ top: 25px;
+ width: 400px;
+ height: 100px;
+ background: linear-gradient(green, blue, white);
+ border: 1px solid black;
+ color: black;
+ font-weight: bold;
+}
+#Container{
+  transition-property: opacity;
+  transition-duration: 10.5s;
+  position: absolute;
+  background-color: black;
+  width: 450px;
+  height: 600px;
+  margin-bottom: 10px;
+}
+#ResultContainer{
+  position: absolute;
+  text-align: bottom;
+  height: 75px;
+  width: 375px;
+  background-color: #008B8B;
+  left: 45px;
+  top: 90px;
+  text-align: end;
+}
+#SecondResultContainer{
+  position: absolute;
+  height: 75px;
+  width: 375px;
+  background-color: cyan;
+  left: 45px;
+  top: 20px;
+  text-align: end;
+  color: black;
+}
+#BtnNine{
+  position: absolute;
+  height: 90px;
+  width: 90px;
+  background-color: #303030;
+  left: 235px;
+  top: 180px;
+}
+#BtnEight{
+  position: absolute;
+  height: 90px;
+  width: 90px;
+  background-color: #303030;
+  left: 140px;
+  top: 180px;
+}
+#BtnSeven{
+  position: absolute;
+  height: 90px;
+  width: 90px;
+  background-color: #303030;
+  left: 45px;
+  top: 180px;
+}
+#BtnSix{
+  position: absolute;
+  height: 90px;
+  width: 90px;
+  background-color: #303030;
+  left: 235px;
+  top: 280px;
+}
+#BtnFive{
+  position: absolute;
+  height: 90px;
+  width: 90px;
+  background-color: #303030;
+  left: 140px;
+  top: 280px;
+}
+#BtnFour{
+  position: absolute;
+  height: 90px;
+  width: 90px;
+  background-color: #303030;
+  left: 45px;
+  top: 280px;
+}
+#BtnThree{
+  position: absolute;
+  height: 90px;
+  width: 90px;
+  background-color: #303030;
+  left: 235px;
+  top: 380px;
+}
+#BtnTwo{
+  position: absolute;
+  height: 90px;
+  width: 90px;
+  background-color: #303030;
+  left: 140px;
+  top: 380px;
+}
+#BtnOne{
+  position: absolute;
+  height: 90px;
+  width: 90px;
+  background-color: #303030;
+  left: 45px;
+  top: 380px;
+}
+#BtnZero{
+  position: absolute;
+  height: 90px;
+  width: 90px;
+  background-color: #303030;
+  left: 140px;
+  top: 480px;
+}
+#BtnClear{
+  position: absolute;
+  height: 90px;
+  width: 90px;
+  background-color: #303030;
+  left: 45px;
+  top: 480px;
+}
+#BtnEqual{
+  position: absolute;
+  height: 90px;
+  width: 90px;
+  background-color: #303030;
+  left: 235px;
+  top: 480px;
+}
+#BtnMore{
+  position: absolute;
+  height: 90px;
+  width: 90px;
+  background-color: #303030;
+  left: 330px;
+  top: 480px;
+}
+#BtnMinus{
+  position: absolute;
+  height: 90px;
+  width: 90px;
+  background-color: #303030;
+  left: 330px;
+  top: 380px;
+}
+#BtnMult{
+  position: absolute;
+  height: 90px;
+  width: 90px;
+  background-color: #303030;
+  left: 330px;
+  top: 280px;
+}
+#BtnDiv{
+  position: absolute;
+  height: 90px;
+  width: 90px;
+  background-color: #303030;
+  left: 330px;
+  top: 180px;
+}
+
+.Destaque:active{
+  box-shadow: 0 0 15px yellow;
+}
