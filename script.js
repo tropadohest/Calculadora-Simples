@@ -16,8 +16,7 @@ let minus = document.getElementById('BtnMinus');
 let mult = document.getElementById('BtnMult');
 let div = document.getElementById('BtnDiv');
 let clear = document.getElementById('BtnClear');
-var alert = document.querySelector('#Alert');
-var killBtn = document.querySelector('#BtnKill');
+var opControl = 0;
 var boolFlag = false;
 var firstNumber = '';
 var secondNumber = '';
@@ -123,13 +122,16 @@ div.addEventListener('click', () => {
 })
 
 equal.addEventListener('click', () => {
-  inputNumbers();
-  finalResult = opVerify();
-  secondContainer.innerText = finalResult;
-  firstNumber = '';
-  secondNumber = '';
-  boolFlag = false;
-  op = '';
+  if(firstNumber != ''){
+   inputNumbers();
+   finalResult = opVerify();
+   secondContainer.innerText = finalResult;
+   boolFlag = true;
+   firstNumber = finalResult;
+   secondNumber = '';
+   op = '';
+   opControl = 0;
+  }
 });
 
 function inputNumbers(){
@@ -138,10 +140,12 @@ function inputNumbers(){
       firstNumber += container.innerText;
       boolFlag = true;
       container.innerText = '';
+      console.log(firstNumber, secondNumber);
     } else {
         secondNumber += container.innerText;
         boolFlag = false;
         container.innerText = '';
+      console.log(firstNumber, secondNumber);
     }
   }
 };
@@ -153,19 +157,23 @@ function visorClearFunc(){
     secondContainer.innerText = '';
     boolFlag = false;
     op = '';
+  console.log("firstNumber, secondNumber");
 };
 
 function opVerify(){
-  if(op === "+"){
+  if(op === "+" && opControl == 0){
+    opControl++
     return Number(firstNumber) + Number(secondNumber);
-  } else if (op === "-"){
+  } else if (op === "-" && opControl == 0){
+    opControl++
     return Number(firstNumber) - Number(secondNumber);
-  } else if (op === "*"){
+  } else if (op === "*" && opControl == 0){
+    opControl++
     return Number(firstNumber) * Number(secondNumber);
-  } else if (op === "/"){
+  } else if (op === "/" && opControl == 0){
+    opControl++
     if(secondNumber == 0){
       visorClearFunc();
-      fc.style.pointerEvents = 'none';
       return secondContainer.innerText = "0 não se divide!"
     }
     return Number(firstNumber) / Number(secondNumber);
